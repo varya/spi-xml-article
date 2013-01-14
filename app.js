@@ -1,6 +1,6 @@
 $(function(){
 
-    var $body = $('body');
+    var $body = $('.body_i');
 
     $body.on('click', '.article_load', function(e){
         $btn = $(e.target);
