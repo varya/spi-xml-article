@@ -49,6 +49,11 @@
       <xsl:template match="newsList/news">
           <li>
               <a href="#">
+                  <xsl:attribute name="onclick">
+                      <xsl:text>return { 'id': '</xsl:text>
+                      <xsl:value-of select="id"/>
+                      <xsl:text>' }</xsl:text>
+                  </xsl:attribute>
                   <xsl:apply-templates select="title"/>
               </a>
               <div>
