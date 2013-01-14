@@ -36,39 +36,39 @@
         <xsl:value-of select="$year"/>
     </xsl:template>
 
-      <xsl:template match="/">
-          <xsl:apply-templates select="response/newsList"/>
-      </xsl:template>
+    <xsl:template match="/">
+        <xsl:apply-templates select="response/newsList"/>
+    </xsl:template>
 
-      <xsl:template match="newsList">
-          <ul>
-              <xsl:apply-templates select="news"/>
-          </ul>
-      </xsl:template>
+    <xsl:template match="newsList">
+        <ul>
+            <xsl:apply-templates select="news"/>
+        </ul>
+    </xsl:template>
 
-      <xsl:template match="newsList/news">
-          <li>
-              <a href="#">
-                  <xsl:attribute name="onclick">
-                      <xsl:text>return { 'id': '</xsl:text>
-                      <xsl:value-of select="id"/>
-                      <xsl:text>' }</xsl:text>
-                  </xsl:attribute>
-                  <xsl:apply-templates select="title"/>
-              </a>
-              <div>
-                  <xsl:apply-templates select="shortText"/>
-              </div>
-              <span>
-                  <xsl:apply-templates select="date"/>
-              </span>
-          </li>
-      </xsl:template>
+    <xsl:template match="newsList/news">
+        <li>
+            <a href="#">
+                <xsl:attribute name="onclick">
+                    <xsl:text>return { 'id': '</xsl:text>
+                    <xsl:value-of select="id"/>
+                    <xsl:text>' }</xsl:text>
+                </xsl:attribute>
+                <xsl:apply-templates select="title"/>
+            </a>
+            <div>
+                <xsl:apply-templates select="shortText"/>
+            </div>
+            <span>
+                <xsl:apply-templates select="date"/>
+            </span>
+        </li>
+    </xsl:template>
 
-      <xsl:template match="date">
-          <xsl:call-template name="b:format-date">
-              <xsl:with-param name="date" select="."/>
-          </xsl:call-template>
-      </xsl:template>
+    <xsl:template match="date">
+        <xsl:call-template name="b:format-date">
+            <xsl:with-param name="date" select="."/>
+        </xsl:call-template>
+    </xsl:template>
 
 </xsl:stylesheet>
