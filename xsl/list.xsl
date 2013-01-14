@@ -3,6 +3,7 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:b="urn:backbase-functions"
     version="1.0"
+    exclude-result-prefixes="b"
     >
 
     <xsl:output method="html"/>
