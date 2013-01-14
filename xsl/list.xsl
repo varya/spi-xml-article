@@ -49,6 +49,11 @@
 
     <xsl:template match="newsList/news">
         <li>
+            <xsl:attribute name="onclick">
+                <xsl:text>return { 'id': '</xsl:text>
+                <xsl:value-of select="id"/>
+                <xsl:text>' }</xsl:text>
+            </xsl:attribute>
             <b>
                 <xsl:apply-templates select="title"/>
             </b>
@@ -56,14 +61,7 @@
                 <xsl:apply-templates select="shortText"/>
             </div>
             <div class="article_text"></div>
-            <span class="article_load">
-                <xsl:attribute name="onclick">
-                    <xsl:text>return { 'id': '</xsl:text>
-                    <xsl:value-of select="id"/>
-                    <xsl:text>' }</xsl:text>
-                </xsl:attribute>
-                more
-            </span>
+            <span class="article_load">more</span>
             <span>
                 <xsl:apply-templates select="date"/>
             </span>

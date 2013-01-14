@@ -12,7 +12,7 @@ $(function(){
             xml: 'data/article.xml',
             xsl: 'xsl/article.xsl',
             xslParams: {
-                articleId: e.target.onclick().id
+                articleId: $article[0].onclick().id
             }
         });
     });
