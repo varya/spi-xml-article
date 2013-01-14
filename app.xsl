@@ -6,7 +6,27 @@
       <xsl:output method="html"/>
 
       <xsl:template match="/">
-      ddddddddddd
+          <xsl:apply-templates select="response/newsList"/>
+      </xsl:template>
+
+      <xsl:template match="newsList">
+          <ul>
+              <xsl:apply-templates select="news"/>
+          </ul>
+      </xsl:template>
+
+      <xsl:template match="newsList/news">
+          <li>
+              <a href="#">
+                  <xsl:apply-templates select="title"/>
+              </a>
+              <div>
+                  <xsl:apply-templates select="shortText"/>
+              </div>
+              <span>
+                  <xsl:apply-templates select="date"/>
+              </span>
+          </li>
       </xsl:template>
 
 </xsl:stylesheet>
