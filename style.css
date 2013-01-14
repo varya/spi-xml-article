@@ -1,0 +1,27 @@
+body
+{
+    font: 13px Helvetica, Arial, sans-serif;
+    background: #979797;
+}
+
+.body_i
+{
+    width: 800px;
+    max-width: 100%;
+    margin: 2em auto;
+    padding: 1.6em;
+}
+
+.article_text
+{
+    display: none;
+}
+.article-extended .article_anno
+{
+    display: none;
+}
+
+.article-extended .article_text
+{
+    display: block;
+}
