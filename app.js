@@ -7,7 +7,7 @@ $(function(){
         $article = $btn.parent();
 
         $article.addClass('article-extended');
-        $btn.removeClass('article_load').addClass('article_toggle').text('hide');
+        $btn.removeClass('article_load').addClass('article_toggle').addClass('article_hide').text('hide');
         $article.find('.article_text').transform({
             xml: 'data/article.xml',
             xsl: 'xsl/article.xsl',
@@ -20,7 +20,8 @@ $(function(){
     $body.on('click', '.article_toggle', function(e){
         $btn = $(e.target);
         $btn.text($btn.text() == 'more' ? 'hide' : 'more');
-        $btn.parent().toggleClass('article-extended')
+        $btn.toggleClass('article_hide').toggleClass('article_show');
+        $btn.parent().toggleClass('article-extended');
     });
 
     $body.transform({

@@ -42,27 +42,27 @@
     </xsl:template>
 
     <xsl:template match="newsList">
-        <ul>
+        <ul class="list">
             <xsl:apply-templates select="news"/>
         </ul>
     </xsl:template>
 
     <xsl:template match="newsList/news">
-        <li>
+        <li class="article box">
             <xsl:attribute name="onclick">
                 <xsl:text>return { 'id': '</xsl:text>
                 <xsl:value-of select="id"/>
                 <xsl:text>' }</xsl:text>
             </xsl:attribute>
-            <b>
+            <h2>
                 <xsl:apply-templates select="title"/>
-            </b>
+            </h2>
             <div class="article_anno">
                 <xsl:apply-templates select="shortText"/>
             </div>
             <div class="article_text"></div>
             <span class="article_load">more</span>
-            <span>
+            <span class="article_date">
                 <xsl:apply-templates select="date"/>
             </span>
         </li>
