@@ -44,12 +44,12 @@ h2
 {
     display: none;
 }
-.article-extended .article_anno
+.article--extended .article_anno
 {
     display: none;
 }
 
-.article-extended .article_text
+.article--extended .article_text
 {
     display: block;
 }
