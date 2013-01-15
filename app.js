@@ -2,26 +2,27 @@ $(function(){
 
     var $body = $('.body_i');
 
-    $body.on('click', '.article_load', function(e){
+    $body.on('click', '.btn', function(e){
         $btn = $(e.target);
         $article = $btn.parent();
 
-        $article.addClass('article-extended');
-        $btn.removeClass('article_load').addClass('article_toggle').addClass('article_hide').text('hide');
-        $article.find('.article_text').transform({
-            xml: 'data/article.xml',
-            xsl: 'xsl/article.xsl',
-            xslParams: {
-                articleId: $article[0].onclick().id
-            }
-        });
-    });
+        if ($btn.hasClass('article_load')) {
+            // Loading full text of the article
+            $article.addClass('article-extended');
+            $btn.removeClass('article_load').addClass('article_toggle').addClass('article_hide').text('hide');
+            $article.find('.article_text').transform({
+                xml: 'data/article.xml',
+                xsl: 'xsl/article.xsl',
+                xslParams: {
+                    articleId: $article[0].onclick().id
+                }
+            });
+        } else {
+            $btn.text($btn.text() == 'more' ? 'hide' : 'more');
+            $btn.toggleClass('article_hide').toggleClass('article_show');
+            $article.toggleClass('article-extended');
+        }
 
-    $body.on('click', '.article_toggle', function(e){
-        $btn = $(e.target);
-        $btn.text($btn.text() == 'more' ? 'hide' : 'more');
-        $btn.toggleClass('article_hide').toggleClass('article_show');
-        $btn.parent().toggleClass('article-extended');
     });
 
     $body.transform({
