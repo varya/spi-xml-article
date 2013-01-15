@@ -59,29 +59,23 @@ h2
     color: #666;
     float: right;
     font-size: 0.8em;
+    clear: both;
 }
 
 .btn
 {
     cursor: pointer;
-    padding-right: 7px;
-}
-
-.btn:after
-{
-    content: '\21F1';
-
+    padding: 2px 7px;
+    margin: 0 0 7px;
+    float: right;
+    box-shadow:0 1px 7px rgba(30, 23, 0, .8) inset, 0 2px 0 -1px rgba(255, 255, 255, .2);
+    border-radius:3px;
     display: inline-block;
-    position: absolute;
-
-    width: 15px;
-    height: 15px;
-
-    bottom: 18px;
+    text-align: center;
 }
 
-.article_load:after,
-.article_more:after
+.article_load,
+.article_more
 {
 
     -webkit-transform:rotate(180deg);
@@ -89,15 +83,6 @@ h2
         -ms-transform:rotate(180deg);
          -o-transform:rotate(180deg);
             transform:rotate(180deg);
-}
-
-.article_hide:after
-{
-    -webkit-transform:rotate(90deg);
-       -moz-transform:rotate(90deg);
-         -ms-transform:rotate(90deg);
-          -o-transform:rotate(90deg);
-             transform:rotate(90deg);
 }
 
 .box

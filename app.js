@@ -9,7 +9,7 @@ $(function(){
         if ($btn.hasClass('article_load')) {
             // Loading full text of the article
             $article.addClass('article--extended');
-            $btn.removeClass('article_load').addClass('article_toggle').addClass('article_hide').text('hide');
+            $btn.removeClass('article_load').addClass('article_hide');
             $article.find('.article_text').transform({
                 xml: 'data/article.xml',
                 xsl: 'xsl/article.xsl',
@@ -18,7 +18,7 @@ $(function(){
                 }
             });
         } else {
-            $btn.text($btn.text() == 'more' ? 'hide' : 'more');
+            // toggle classes to hide or show
             $btn.toggleClass('article_hide').toggleClass('article_more');
             $article.toggleClass('article--extended');
         }
