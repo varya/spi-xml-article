@@ -61,7 +61,7 @@
                 <xsl:apply-templates select="shortText"/>
             </div>
             <div class="article_text"></div>
-            <span class="article_load">more</span>
+            <span class="btn article_load">more</span>
             <span class="article_date">
                 <xsl:apply-templates select="date"/>
             </span>

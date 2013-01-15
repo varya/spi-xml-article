@@ -61,17 +61,13 @@ h2
     font-size: 0.8em;
 }
 
-.artcle_load,
-.article_show,
-.article_hide
+.btn
 {
     cursor: pointer;
     padding-right: 7px;
 }
 
-.article_hide:after,
-.article_load:after,
-.article_show:after
+.btn:after
 {
     content: '\21F1';
 
@@ -82,6 +78,11 @@ h2
     height: 15px;
 
     bottom: 18px;
+}
+
+.article_load:after,
+.article_more:after
+{
 
     -webkit-transform:rotate(180deg);
     -moz-transform:rotate(180deg);
