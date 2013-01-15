@@ -19,7 +19,7 @@ $(function(){
             });
         } else {
             $btn.text($btn.text() == 'more' ? 'hide' : 'more');
-            $btn.toggleClass('article_hide').toggleClass('article_show');
+            $btn.toggleClass('article_hide').toggleClass('article_more');
             $article.toggleClass('article--extended');
         }
 
