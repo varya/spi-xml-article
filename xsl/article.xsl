@@ -4,6 +4,8 @@
     version="1.0"
     >
 
+    <xsl:param name="articleId"/>
+
     <xsl:output method="html"/>
 
     <xsl:template match="/">
